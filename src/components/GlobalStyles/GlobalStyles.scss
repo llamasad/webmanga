@@ -1,8 +1,20 @@
 @import url(normalize.css);
 
 :root {
+  --dark-mode-color: #000000;
+  --light-mode-color: #ffffff;
+  --icon-light-mode-color: #333333;
+  --icon-dark-mode-color: #dddddd;
+  --text-color: #3b3b3b;
 }
 
 html {
   font-size: 62, 5%;
+}
+
+body {
+  height: 1000px;
+  background: no-repeat repeating-linear-gradient(45deg, #adadad, #ffffff 3px, #adadad 3px, #ffffff 3px);
+  background-repeat: none;
+  // background-size: contain;
 }

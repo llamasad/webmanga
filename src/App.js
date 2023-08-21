@@ -1,7 +1,12 @@
+import Header from '~/layouts/Header';
+import GlobalStyles from '~/components/GlobalStyles';
 function App() {
   return (
     <div className="App">
-      <h1>Hell2222o</h1>
+      <Header />
+      <GlobalStyles>
+        <div></div>
+      </GlobalStyles>
     </div>
   );
 }

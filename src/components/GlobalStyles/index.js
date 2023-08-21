@@ -1,6 +1,9 @@
+import classNames from 'classnames/bind';
 import './GlobalStyles.scss';
+import styles from './GlobalStyles.module.scss';
+const cx = classNames.bind(styles);
 function GlobalStyles({ children }) {
-  return children;
+  return <div className={cx('responsive')}>{children}</div>;
 }
 
 export default GlobalStyles;
