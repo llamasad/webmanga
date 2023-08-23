@@ -1,13 +1,40 @@
-import Header from '~/layouts/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Fragment } from 'react';
+
+import OnlyHeader from './layouts/OnlyHeader';
 import GlobalStyles from '~/components/GlobalStyles';
+import { publicRoute } from './routes';
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <GlobalStyles>
-        <div></div>
-      </GlobalStyles>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {publicRoute.map((route, index) => {
+            let Layout = OnlyHeader;
+            let Page = route.component;
+            if (route.layout) {
+              Layout = route.layout;
+            } else if (route.layout === null) {
+              Layout = Fragment;
+            }
+            console.log(route);
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <Layout>
+                    <GlobalStyles>
+                      <Page />
+                    </GlobalStyles>
+                  </Layout>
+                }
+              />
+            );
+          })}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

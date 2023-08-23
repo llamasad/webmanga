@@ -6,10 +6,12 @@
   --icon-light-mode-color: #333333;
   --icon-dark-mode-color: #dddddd;
   --text-color: #3b3b3b;
+  --header-height: 70px;
 }
 
 html {
-  font-size: 62, 5%;
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body {

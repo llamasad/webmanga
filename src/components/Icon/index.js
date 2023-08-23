@@ -1,1 +1,1 @@
-export { LightMode, DarkMode, SearchIcon } from './Icon';
+export { LightMode, DarkMode, SearchIcon, DeteleTextIcon } from './Icon';

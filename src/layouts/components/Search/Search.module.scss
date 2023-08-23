@@ -1,6 +1,6 @@
 .load {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   animation: rotate 1s linear infinite;
 }
 @keyframes rotate {
@@ -23,6 +23,11 @@
   outline: none;
   border: none;
   margin-left: 6px;
+  font-size: 1.8rem;
+}
+.delete {
+  width: 18px;
+  height: 18px;
 }
 .wrapper {
   display: flex;
@@ -33,4 +38,9 @@
 }
 .wrapper-input {
   display: flex;
+  align-items: center;
+}
+.wrap-logo {
+  width: 18px;
+  height: 18px;
 }

@@ -11,7 +11,7 @@ const Image = forwardRef(
     const handleError = () => {
       setFallback(customFallback);
     };
-    console.log(styles);
+
     return (
       <img
         className={classNames(styles.wrapper, className)}
