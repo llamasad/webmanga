@@ -1,12 +1,15 @@
 @import url(normalize.css);
 
 :root {
-  --dark-mode-color: #000000;
-  --light-mode-color: #ffffff;
-  --icon-light-mode-color: #333333;
+  --mode-color: #ffffff;
+  --icon-mode-color: #333333;
   --icon-dark-mode-color: #dddddd;
   --text-color: #3b3b3b;
   --header-height: 70px;
+  --logo-color: #3b3b3bab;
+  --authentication-color: #ebeaea;
+  --background-color: #ffffff;
+  --search-result-color: rgb(250, 250, 250);
 }
 
 html {
@@ -16,7 +19,8 @@ html {
 
 body {
   height: 1000px;
-  background: no-repeat repeating-linear-gradient(45deg, #adadad, #ffffff 3px, #adadad 3px, #ffffff 3px);
+  background: no-repeat
+    repeating-linear-gradient(45deg, #adadad, var(--background-color) 3px, #adadad 3px, var(--background-color) 3px);
   background-repeat: none;
   // background-size: contain;
 }

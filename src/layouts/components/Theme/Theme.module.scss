@@ -1,0 +1,11 @@
+.container svg {
+  color: var(--text-color);
+  opacity: 0.85;
+}
+.container svg:hover {
+  opacity: 1;
+}
+.container {
+  height: 34px;
+  margin: 0 0 0 10px;
+}

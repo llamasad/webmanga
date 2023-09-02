@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   height: var(--header-height);
-  background-color: var(--light-mode-color);
+  background-color: var(--mode-color);
 }
 .inner {
   display: flex;
@@ -20,7 +20,7 @@
   user-select: none;
 }
 .logo-mode {
-  color: var(--icon-light-mode-color);
+  color: var(--icon-mode-color);
   cursor: pointer;
   padding: 3px;
 }
@@ -29,7 +29,7 @@
   background-color: rgba(#808080, 0.8);
 }
 .name {
-  color: #3b3b3bab;
+  color: var(--logo-color);
   lighting-color: none;
   user-select: none;
   cursor: pointer;
@@ -49,16 +49,46 @@
 .link {
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 500px;
+  font-weight: 500;
   color: #e7ba3f;
 }
+.bottom-wrapper {
+  display: flex;
+  flex: 1;
+}
+.middle-wrapper {
+  margin: 0 5px;
+}
 @media only screen and (max-width: 864px) {
+  .logo-mode {
+    position: absolute;
+    left: calc((100vw - 230px) / 2 + 240px);
+    top: 19px;
+  }
+  .middle-wrapper {
+    margin-bottom: 10px;
+    order: 3;
+  }
+  .second-middle-wrapper {
+    order: 4;
+    margin-bottom: auto;
+  }
+  .bottom-wrapper {
+    flex: none;
+    height: 34px;
+    order: 2;
+    margin-bottom: 8px;
+  }
+  .wrapper {
+    --header-height: 184px;
+    height: var(--header-height);
+  }
+  .inner {
+    flex-direction: column;
+  }
   .logo {
     width: 60px;
     height: 60px;
-  }
-  .wrapper {
-    height: 70px;
   }
 }
 @media only screen and (min-width: 1366px) {
@@ -85,11 +115,14 @@
     width: 864px;
     margin: 0 auto;
   }
+  .input {
+    width: 160px;
+  }
 }
 
 @media only screen and (max-width: 864px) {
   .inner {
-    width: 360px;
+    width: 342px;
 
     margin: 0 auto;
   }

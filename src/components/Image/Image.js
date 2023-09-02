@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState, forwardRef } from 'react';
+import { useState, forwardRef, useEffect } from 'react';
 import classNames from 'classnames';
 import images from '~/assets/images';
 import styles from './Image.module.scss';

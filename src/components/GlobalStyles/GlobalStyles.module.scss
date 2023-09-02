@@ -26,8 +26,14 @@
 
 @media only screen and (max-width: 864px) {
   .responsive {
-    width: 360px;
+    width: 640px;
 
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .responsive {
+    width: 342mpx;
     margin: 0 auto;
   }
 }

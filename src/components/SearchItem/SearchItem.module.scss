@@ -1,0 +1,37 @@
+.img {
+  height: 50px;
+}
+.img-wrap {
+  width: 50px;
+  text-align: center;
+}
+.content {
+  height: 100%;
+  color: var(--text-color);
+  width: 350px;
+}
+.container ~ .container {
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  cursor: pointer;
+  overflow: visible;
+  background-color: var(--search-result-color);
+}
+.container:hover {
+  filter: brightness(90%);
+}
+.tilte {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+.container p {
+  margin: 0;
+  font-size: 1.1rem;
+}

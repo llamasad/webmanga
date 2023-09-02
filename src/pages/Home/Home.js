@@ -1,6 +1,11 @@
+import Popular from '~/layouts/components/Popular';
+
 function Home() {
-  console.log('home');
-  return <div>home</div>;
+  return (
+    <div>
+      <Popular />
+    </div>
+  );
 }
 
 export default Home;

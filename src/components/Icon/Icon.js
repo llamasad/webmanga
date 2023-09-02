@@ -1,4 +1,4 @@
-const LightMode = function ({ width, height, className }) {
+const DarkMode = function ({ width, height, className }) {
   return (
     <svg viewBox="0 0 24 24" width={width} height={height} className={className}>
       <path
@@ -8,7 +8,7 @@ const LightMode = function ({ width, height, className }) {
     </svg>
   );
 };
-const DarkMode = function ({ width, height, className }) {
+const LightMode = function ({ width, height, className }) {
   return (
     <svg className={className} viewBox="0 0 24 24" width={width} height={height}>
       <path
@@ -32,17 +32,10 @@ const SearchIcon = function ({ width, height, className }) {
     </svg>
   );
 };
-const DeteleTextIcon = function ({ width, height, className }) {
+const DeteleTextIcon = function (props) {
+  console.log(() => console.log('re-render 3'), []);
   return (
-    <svg
-      className={className}
-      width={width}
-      data-e2e=""
-      height={height}
-      viewBox="0 0 48 48"
-      fill="rgba(22, 24, 35, .34)"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg {...props} data-e2e="" viewBox="0 0 48 48" fill="rgba(22, 24, 35, .34)" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

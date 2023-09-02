@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .img {
+    width: 20%;
+  }
+  span {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: var(--text-color);
+  }
+}
