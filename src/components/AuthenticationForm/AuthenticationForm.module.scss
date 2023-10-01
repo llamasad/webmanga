@@ -1,0 +1,146 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+
+  padding: 30px 50px;
+  background-color: white;
+  border-radius: 12px;
+}
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 400px;
+}
+.header {
+  text-align: center;
+  font-size: 3.6rem;
+  color: #424242;
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.link-auth {
+  width: 48%;
+  position: relative;
+  height: 54px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 54px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  z-index: 1;
+  margin-bottom: 40px;
+  i {
+    margin-right: 4px;
+  }
+  text-decoration: none;
+}
+.link-auth:hover::after {
+  opacity: 1;
+}
+.img {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  transform: translateY(1px);
+}
+.link-auth--face {
+  margin-right: 4%;
+  background-color: #3b5998;
+  color: white;
+}
+.link-auth--goo {
+  color: #555;
+  box-shadow: 0 0 2px 1px #979797;
+}
+.link-auth--goo:hover {
+  color: white;
+  box-shadow: none;
+}
+.header-user-wrap {
+  font-size: 1.6rem;
+  width: 100%;
+
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.header-user-wrap ~ .header-user-wrap {
+  margin: 16px 0 10px;
+}
+
+.link-auth::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #e7ba3f, #52ec15);
+  z-index: -1;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+  border-radius: 8px;
+}
+
+.bottom-wrap {
+  width: 100%;
+}
+.bottom::before {
+  content: '';
+
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #e7ba3f, #52ec15);
+  z-index: -1;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+  border-radius: 10px;
+}
+.bottom:hover::before {
+  opacity: 1;
+}
+.bottom {
+  position: relative;
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: white;
+  background-color: #555;
+  border: none;
+  margin-top: 16px;
+  margin-bottom: 40px;
+  cursor: pointer;
+
+  z-index: 1;
+}
+.other-option {
+  font-size: 1.6rem;
+}
+.link {
+  color: #e7ba3f;
+  padding-left: 6px;
+}
+@media only screen and (max-width: 864px) {
+  .container {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .form {
+    width: 100%;
+  }
+  .link-auth {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+}

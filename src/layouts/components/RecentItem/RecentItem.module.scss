@@ -1,0 +1,121 @@
+.container {
+  width: var(--recent-item-width);
+  color: var(--text-color);
+  position: relative;
+  margin-bottom: 10px;
+
+  .update-at {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding: 2px 4px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: #e7ba3f;
+  }
+  .title {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 5px 4px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .latest-chapter {
+    margin: 5px 0;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+.show-wrap {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  left: 1px;
+  height: 24px;
+  background-color: rgba($color: #383838, $alpha: 0.8);
+  top: calc(var(--img-home-height) - 23px);
+}
+.rating-icon {
+  transform: translateX(-2px);
+}
+.rating {
+  font-size: 1.4rem;
+}
+.total-view {
+  font-size: 1.4rem;
+}
+.img {
+  border-radius: 6px;
+  border: 1px solid white;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  height: var(--img-home-height);
+  object-fit: fill;
+}
+.wrapper {
+  background-color: white;
+  width: 400px;
+  overflow: visible;
+  padding-left: 4px;
+
+  max-height: max-content;
+}
+.tippy-title {
+  margin: 0;
+  color: #e7ba3f;
+  font-size: 1.4rem;
+}
+.other-name {
+  margin: 6px 0 0 0;
+  font-size: 1.2rem;
+}
+.status {
+  margin: 6px 0 0 0;
+  font-size: 1.2rem;
+}
+.view {
+  margin: 6px 0 0 0;
+  font-size: 1.2rem;
+}
+.folowing {
+  margin: 6px 0 0 0;
+  font-size: 1.2rem;
+}
+.genres {
+  margin: 6px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.genre {
+  background-color: #e7ba3f;
+  font-size: 1.2rem;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.genre + .genre {
+  margin-left: 6px;
+}
+.decription {
+  margin: 6px 0 10px 0;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 18;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

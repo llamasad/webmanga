@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Tippy from '@tippyjs/react/headless';
-
+import { Fragment } from 'react';
 import Image from '~/components/Image/Image';
 import images from '~/assets/images';
 import styles from './Search.module.scss';
@@ -17,7 +17,8 @@ function Search({ className }) {
   const [searchValue, setSearchValue] = useState('');
   const [loading, setLoading] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
-
+  const [onFocus, setOnFocus] = useState(false);
+  const notBlurElement = useRef('');
   function handleTextChange(ev) {
     if (ev.target.value.trim() || searchValue) {
       setSearchValue(ev.target.value);
@@ -28,6 +29,26 @@ function Search({ className }) {
   function handleDelete() {
     setSearchValue('');
     setSearchResult([]);
+  }
+
+  function handleFocus(ev) {
+    switch (ev.type) {
+      case 'blur':
+        if (ev.relatedTarget === notBlurElement.current) {
+          setTimeout(() => {
+            ev.target.focus();
+          }, 0);
+          break;
+        }
+        setOnFocus(false);
+
+        break;
+      case 'focus':
+        setOnFocus(true);
+        break;
+      default:
+        break;
+    }
   }
   const value = useDebounce(searchValue, 500);
   useEffect(() => {
@@ -44,14 +65,19 @@ function Search({ className }) {
       <Tippy
         interactive
         offset={[0, 10]}
-        visible={value && !loading && searchValue}
+        visible={value && !loading && searchValue && onFocus}
         placement="bottom"
         render={(attrs) => (
-          <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+          <div className={cx('search-result')} tabIndex="-1" {...attrs} ref={notBlurElement}>
             <Wrapper>
-              {/* <h4 className={cx('search-title')}>Manga</h4> */}
+              <h4 className={cx('search-title')}>Search result</h4>
               {searchResult.length ? (
-                searchResult.map((result, id) => <SearchItem key={id} data={result} />)
+                <Fragment>
+                  {searchResult.map((result, id) => (
+                    <SearchItem key={id} data={result} />
+                  ))}
+                  <div className={cx('see-more')}>See more</div>
+                </Fragment>
               ) : (
                 <NotFound />
               )}
@@ -61,7 +87,15 @@ function Search({ className }) {
       >
         <div className={cx('wrapper')}>
           <div className={cx('wrapper-input')}>
-            <input className={cx('input', className)} value={searchValue} onChange={handleTextChange} />
+            <input
+              tabIndex={0}
+              id="searchContent"
+              className={cx('input', className)}
+              value={searchValue}
+              onChange={handleTextChange}
+              onBlur={handleFocus}
+              onFocus={handleFocus}
+            />
             <div className={cx('wrap-logo')}>
               {searchValue && loading && <Image src={images.loadLogo} className={cx('load')} />}
               {searchValue && !loading && <DeteleTextIcon className={cx('delete')} onClick={handleDelete} />}

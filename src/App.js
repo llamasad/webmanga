@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import OnlyHeader from './layouts/OnlyHeader';
 import GlobalStyles from '~/components/GlobalStyles';
 import { publicRoute } from './routes';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Router>
@@ -33,6 +34,7 @@ function App() {
             );
           })}
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

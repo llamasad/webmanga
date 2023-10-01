@@ -4,12 +4,15 @@
   --mode-color: #ffffff;
   --icon-mode-color: #333333;
   --icon-dark-mode-color: #dddddd;
-  --text-color: #3b3b3b;
+  --text-color: #2b2b2b;
   --header-height: 70px;
   --logo-color: #3b3b3bab;
   --authentication-color: #ebeaea;
   --background-color: #ffffff;
   --search-result-color: rgb(250, 250, 250);
+  --popular-item-width: 17%;
+  --background-image: url('../../assets/images/background-light.png');
+  --wrap-delight-img: url('../../assets/images/wrap-delight-light.png');
 }
 
 html {
@@ -18,9 +21,6 @@ html {
 }
 
 body {
-  height: 1000px;
   background: no-repeat
-    repeating-linear-gradient(45deg, #adadad, var(--background-color) 3px, #adadad 3px, var(--background-color) 3px);
-  background-repeat: none;
-  // background-size: contain;
+    repeating-linear-gradient(45deg, #b6b6b6, var(--background-color) 3px, #b6b6b6 3px, var(--background-color) 6px);
 }

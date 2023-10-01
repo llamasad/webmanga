@@ -8,15 +8,15 @@ import Image from '~/components/Image';
 
 import Search from '../Search';
 import LoginRegister from '../LoginRegister';
-import Mode from '../Theme';
-import { createContext, useState } from 'react';
+import Theme from '../Theme';
+import { createContext, useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 export const ThemeColor = createContext(null);
 function Header() {
   const [logo, setLogo] = useState('lightLogo');
-
+  useEffect(() => console.log('render'), []);
   return (
     <ThemeColor.Provider value={setLogo}>
       <header className={cx('wrapper')}>
@@ -43,7 +43,7 @@ function Header() {
           </div>
 
           <div className={cx('bottom-wrapper')}>
-            <Mode width="28" height="28" className={cx('logo-mode')} />
+            <Theme width="28" height="28" className={cx('logo-mode')} />
             <LoginRegister path={window.location.pathname} />
           </div>
         </div>

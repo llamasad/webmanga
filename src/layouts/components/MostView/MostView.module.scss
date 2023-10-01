@@ -1,0 +1,27 @@
+.typeof-mostview {
+  color: var(--text-color);
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  flex: 1;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+}
+.typeof-mostview:hover {
+  border-bottom: 4px solid #e7ba3f;
+}
+.typeof-mostview.active {
+  border-bottom: 4px solid #e7ba3f;
+}
+.wrapper {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.wrapper-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 5px;
+}

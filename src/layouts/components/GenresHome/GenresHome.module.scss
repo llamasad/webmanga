@@ -1,0 +1,41 @@
+.container {
+  margin-top: 20px;
+}
+.wrapper {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.item {
+  width: calc(33.33% - 10px);
+  margin: 0 5px 10px;
+  text-align: center;
+  height: 30px;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #e7ba3f;
+  line-height: 3rem;
+}
+.line-through {
+  position: relative;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  font-weight: 500;
+  height: 4rem;
+  line-height: 4rem;
+}
+.line-through::after {
+  content: '';
+  transform: translateX(2px);
+  position: absolute;
+  width: 300px;
+  border-top: 2px solid var(--text-color);
+  top: 18px;
+}

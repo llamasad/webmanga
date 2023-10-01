@@ -1,0 +1,25 @@
+.icon {
+  width: 14px;
+  height: 14px;
+  transform: translateY(2px);
+
+  color: var(--text-color);
+}
+.link {
+  text-decoration: none;
+}
+.icon-wrap {
+  padding: 0 4px 0 6px;
+}
+.icon + .icon {
+  transform: translate(-6px, 2px);
+}
+.container {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  span {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}

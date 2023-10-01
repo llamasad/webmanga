@@ -1,0 +1,13 @@
+.container {
+  padding: 10px;
+  background: no-repeat
+    repeating-linear-gradient(45deg, #a3a3a3, var(--background-color) 3px, #a3a3a3 3px, var(--background-color) 3px);
+  background-color: -50%;
+}
+
+@media only screen and (max-width: 639px) {
+  .container {
+    background-image: var(--wrap-delight-img);
+    background-repeat: repeat;
+  }
+}

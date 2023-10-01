@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+  height: 40px;
+  line-height: 4rem;
+  border-radius: 8px;
+  background-color: #7d7a71;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-out;
+}
+.container:hover {
+  background-color: #e7ba3f;
+}
+.container:hover .icon {
+  transform: translate(26px, 0);
+}
+.icon {
+  transform: translate(5px, 0);
+  width: 24px;
+  height: 24px;
+  padding: 1px 1px;
+  line-height: 2.4rem;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+  transition: transform linear 0.2s;
+}

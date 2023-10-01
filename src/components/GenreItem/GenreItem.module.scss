@@ -1,0 +1,47 @@
+.container {
+  width: calc(25% - 20px);
+  display: inline-block;
+  background-color: #e7ba3f;
+  margin-bottom: 30px;
+  height: 108px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px #e7ba3f solid;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+}
+.name {
+  color: white;
+  font-weight: 500;
+  display: block;
+  height: 20px;
+  line-height: 1.6rem;
+  font-size: 1.6rem;
+}
+.description {
+  color: black;
+  line-height: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+  background-color: white;
+  height: calc(100% - 22px);
+  padding: 0 5px;
+}
+
+@media only screen and (max-width: 864px) {
+  .container {
+    width: calc(33.33% - 20px);
+  }
+}
+@media only screen and (max-width: 639px) {
+  .container {
+    width: calc(50% - 20px);
+  }
+}

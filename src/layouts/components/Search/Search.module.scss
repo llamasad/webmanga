@@ -13,6 +13,8 @@
 }
 .search-result {
   width: 400px;
+  max-width: 80vw;
+
   background-color: var(--search-result-color);
   border-radius: 8px;
 }
@@ -34,9 +36,26 @@
   color: var(--text-color);
   opacity: 0.85;
 }
+.search-title {
+  margin: 0 6px 10px;
+  font-size: 1.5rem;
+  color: (var(--text-color));
+}
+.see-more {
+  color: var(--text-color);
+  text-align: center;
+  height: 40px;
+  line-height: 4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  filter: brightness(80%);
+  cursor: pointer;
+}
 .delete {
   width: 18px;
   height: 18px;
+  color: var(--logo-color);
+  filter: brightness(80%);
 }
 .wrapper {
   display: flex;

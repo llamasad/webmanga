@@ -1,0 +1,16 @@
+.icon {
+  width: 20px;
+  height: 20px;
+
+  transform: translate(-4px, 3px);
+}
+.container {
+  width: var(--recent-witdh);
+}
+.list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

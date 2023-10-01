@@ -1,16 +1,30 @@
 @media only screen and (min-width: 1366px) {
+  :root {
+    --img-home-height: 264px;
+    --recent-witdh: 70%;
+  }
   .responsive {
     width: 1280px;
     margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1920px) {
+  :root {
+    --recent-item-width: calc(25% - 10px);
+    --recent-witdh: 70%;
+    --img-home-height: 302px;
+  }
   .responsive {
     width: 1536px;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 1366px) {
+  :root {
+    --recent-item-width: calc(25% - 10px);
+    --recent-witdh: 70%;
+    --img-home-height: 224px;
+  }
   .responsive {
     width: 1080px;
     margin: 0 auto;
@@ -18,6 +32,10 @@
 }
 
 @media only screen and (max-width: 1080px) {
+  :root {
+    --recent-witdh: 70%;
+    --img-home-height: 186px;
+  }
   .responsive {
     width: 864px;
     margin: 0 auto;
@@ -25,6 +43,12 @@
 }
 
 @media only screen and (max-width: 864px) {
+  :root {
+    --img-home-height: 236px;
+    --recent-item-width: calc(33.33% - 10px);
+    --recent-witdh: 100%;
+    --popular-item-width: 35%;
+  }
   .responsive {
     width: 640px;
 
@@ -32,8 +56,17 @@
   }
 }
 @media only screen and (max-width: 639px) {
+  :root {
+    --popular-item-width: 45%;
+    --recent-item-width: calc(50% - 10px);
+    --img-home-height: 200px;
+  }
+  body {
+    background-image: var(--background-image);
+    background-repeat: repeat;
+  }
   .responsive {
-    width: 342mpx;
+    width: 342px;
     margin: 0 auto;
   }
 }

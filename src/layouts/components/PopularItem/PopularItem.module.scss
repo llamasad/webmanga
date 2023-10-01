@@ -1,0 +1,42 @@
+.container {
+  --height: calc(100% + 54px);
+  width: 100%;
+  padding-top: var(--height);
+  background-repeat: no-repeat;
+  display: block;
+  background-size: cover;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.wrapper {
+  height: 54px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  background-color: rgba($color: #3d3d3d25, $alpha: 0.6);
+}
+.title {
+  padding: 0 6px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.update {
+}
+.lastest {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-around;
+  font-size: 1.2rem;
+  margin-right: auto;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+  text-align: center;
+}

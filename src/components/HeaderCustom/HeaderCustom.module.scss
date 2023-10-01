@@ -1,0 +1,15 @@
+.container {
+  border-bottom: 3px solid var(--text-color);
+  .header {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  .wrapper {
+    background-color: #e7ba3f;
+    width: 200px;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+  }
+}

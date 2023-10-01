@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Header from '../components/Header';
 
 function OnlyHeader({ children }) {

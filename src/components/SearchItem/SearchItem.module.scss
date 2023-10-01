@@ -9,6 +9,7 @@
   height: 100%;
   color: var(--text-color);
   width: 350px;
+  max-width: calc(80vw - 50px);
 }
 .container ~ .container {
   margin-top: 10px;

@@ -33,9 +33,8 @@ const SearchIcon = function ({ width, height, className }) {
   );
 };
 const DeteleTextIcon = function (props) {
-  console.log(() => console.log('re-render 3'), []);
   return (
-    <svg {...props} data-e2e="" viewBox="0 0 48 48" fill="rgba(22, 24, 35, .34)" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} data-e2e="" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -70,4 +69,59 @@ const LanguageIcon = function ({ width, height, className }) {
     </svg>
   );
 };
-export { LightMode, DarkMode, SearchIcon, DeteleTextIcon, LanguageIcon };
+
+const PopularIcon = function ({ className }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1em"
+      viewBox="0 0 448 512"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M159.3 5.4c7.8-7.3 19.9-7.2 27.7 .1c27.6 25.9 53.5 53.8 77.7 84c11-14.4 23.5-30.1 37-42.9c7.9-7.4 20.1-7.4 28 .1c34.6 33 63.9 76.6 84.5 118c20.3 40.8 33.8 82.5 33.8 111.9C448 404.2 348.2 512 224 512C98.4 512 0 404.1 0 276.5c0-38.4 17.8-85.3 45.4-131.7C73.3 97.7 112.7 48.6 159.3 5.4zM225.7 416c25.3 0 47.7-7 68.8-21c42.1-29.4 53.4-88.2 28.1-134.4c-4.5-9-16-9.6-22.5-2l-25.2 29.3c-6.6 7.6-18.5 7.4-24.7-.5c-16.5-21-46-58.5-62.8-79.8c-6.3-8-18.3-8.1-24.7-.1c-33.8 42.5-50.8 69.3-50.8 99.4C112 375.4 162.6 416 225.7 416z" />
+    </svg>
+  );
+};
+const RecentIcon = function ({ className }) {
+  return (
+    <svg
+      className={className}
+      width="100px"
+      height="100px"
+      viewBox="0 0 24 24"
+      id="_24x24_On_Light_Recent"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect id="view-box" width="24" height="24" fill="none" />
+      <path
+        id="Shape"
+        d="M9.682,18.75a.75.75,0,0,1,.75-.75,8.25,8.25,0,1,0-6.189-2.795V12.568a.75.75,0,0,1,1.5,0v4.243a.75.75,0,0,1-.751.75H.75a.75.75,0,0,1,0-1.5H3a9.75,9.75,0,1,1,7.433,3.44A.75.75,0,0,1,9.682,18.75Zm2.875-4.814L9.9,11.281a.754.754,0,0,1-.22-.531V5.55a.75.75,0,1,1,1.5,0v4.889l2.436,2.436a.75.75,0,1,1-1.061,1.06Z"
+        transform="translate(1.568 2.25)"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+const RightArrow = ({ classNames }) => {
+  return (
+    <svg
+      className={classNames}
+      fill="currentColor"
+      height="800px"
+      width="800px"
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 330 330"
+    >
+      <path
+        d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+C255,161.018,253.42,157.202,250.606,154.389z"
+      />
+    </svg>
+  );
+};
+export { LightMode, DarkMode, SearchIcon, DeteleTextIcon, LanguageIcon, PopularIcon, RecentIcon, RightArrow };
